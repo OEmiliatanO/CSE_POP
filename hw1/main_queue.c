@@ -6,9 +6,10 @@
 int main()
 {
 	queue* q;
-	qinit(&q);
+	q = new_queue();
 	int x;
-	while(~scanf("%d", &x)) qpush(q, x);
+	char c;
+	while(~scanf("%d%c", &x, &c)) { qpush(q, x); if (c == '\n') break; }
 	while(q->size) { printf("%d ", qtop(q)); qpop(q); }
 	puts("");
 

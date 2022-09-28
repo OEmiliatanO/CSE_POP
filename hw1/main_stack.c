@@ -5,11 +5,11 @@
 
 int main()
 {
-	
 	stack* s;
-	sinit(&s);
+	s = new_stack();
 	int x;
-	while(~scanf("%d", &x)) spush(s, x);
+	char c;
+	while(~scanf("%d%c", &x, &c)) { spush(s, x); if (c == '\n') break; }
 	while(s->size) { printf("%d ", stop(s)); spop(s); }
 	puts("");
 

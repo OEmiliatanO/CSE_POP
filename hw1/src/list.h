@@ -14,6 +14,7 @@ typedef struct list
 	node* head, *tail;
 }list;
 
+list* new_list();
 void _insert(node*, int);
 void _remove(node*);
 void linsert(list*, size_t, int);

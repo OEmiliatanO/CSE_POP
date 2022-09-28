@@ -2,6 +2,14 @@
 #include "src/mm.h"
 #include <stddef.h>
 
+list* new_list()
+{
+	list* l = (list *) mymalloc(sizeof(list));
+	l->size = 0;
+	l->head = l->tail = NULL;
+	return l;
+}
+
 void _insert(node* now, int val)
 {
 	if (!now) return;

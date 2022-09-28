@@ -9,7 +9,7 @@ typedef struct stack
 	list* List;
 }stack;
 
-void sinit(stack**);
+stack* new_stack();
 void spush(stack*, int);
 void spop(stack*);
 int stop(stack*);

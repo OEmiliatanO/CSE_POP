@@ -1,4 +1,4 @@
-CC:=gcc
+CC:=g++
 FLAG:=-Wall -Wextra -Werror
 OBJQ:=main_queue.o queue.o list.o mm.o
 OBJS:=main_stack.o stack.o list.o mm.o

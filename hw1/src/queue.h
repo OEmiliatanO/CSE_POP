@@ -9,7 +9,7 @@ typedef struct queue
 	list* List;
 }queue;
 
-void qinit(queue**);
+queue* new_queue();
 void qpush(queue*, int);
 int qtop(queue*);
 void qpop(queue*);

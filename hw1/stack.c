@@ -2,12 +2,12 @@
 #include "src/mm.h"
 #include "src/stack.h"
 
-void sinit(stack** s)
+stack* new_stack()
 {
-	(*s) = (stack*)mymalloc(sizeof(stack));
-	(*s)->size = 0;
-	(*s)->List = (list*)mymalloc(sizeof(list));
-	(*s)->List->size = 0;
+	stack* s = (stack*)mymalloc(sizeof(stack));
+	s->size = 0;
+	s->List = new_list();
+	return s;
 }
 
 void spush(stack* s, int val)

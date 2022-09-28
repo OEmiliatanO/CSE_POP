@@ -2,12 +2,12 @@
 #include "src/list.h"
 #include "src/mm.h"
 
-void qinit(queue** q)
+queue* new_queue()
 {
-	(*q) = (queue *)mymalloc(sizeof(queue));
-	(*q)->size = 0;
-	(*q)->List = (list *)mymalloc(sizeof(list));
-	(*q)->List->size = 0;
+	queue* q = (queue *)mymalloc(sizeof(queue));
+	q->size = 0;
+	q->List = new_list();
+	return q;
 }
 
 void qpush(queue* q, int val)
