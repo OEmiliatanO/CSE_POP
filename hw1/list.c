@@ -63,6 +63,12 @@ void linsert(list* li, size_t pos, int val)
 		return;
 	}
 	if (pos >= li->size) return;
+	if (pos == li->size - 1)
+	{
+		++li->size;
+		_insert(li->tail->prev, val);
+		return;
+	}
 	
 	++li->size;
 	node* p = li->head;
@@ -79,6 +85,12 @@ void lremove(list* li, size_t pos)
 		--li->size;
 		li->head = li->head->nex;
 		_remove(li->head->prev);
+		return;
+	}
+	if (pos == li->size - 1)
+	{
+		--li->size;
+		_remove(li->tail->prev);
 		return;
 	}
 
