@@ -1,24 +1,11 @@
-CC:=g++
+CC:=gcc
 FLAG:=-Wall -Wextra -Werror
 OBJQ:=main_queue.o queue.o list.o mm.o
 OBJS:=main_stack.o stack.o list.o mm.o
 SOURCE:=main_queue.c main_stack.c queue.c stack.c list.c mm.c
 
-main_queue.o: main_queue.c
-	$(CC) $(FLAG) -c main_queue.c
-main_stack.o: main_stack.c
-	$(CC) $(FLAG) -c main_stack.c
-queue.o: queue.c
-	$(CC) $(FLAG) -c queue.c
-stack.o: stack.c
-	$(CC) $(FLAG) -c stack.c
-list.o: list.c
-	$(CC) $(FLAG) -c list.c
-mm.o: mm.c
-	$(CC) $(FLAG) -c mm.c
-
-dep: $(SOURCE)
-	make $(OBJ)
+dep:
+	gcc -M $(SOURCE) > .dep
 
 all: $(OBJQ) $(OBJS)
 	$(CC) -o main_queue $(OBJQ)
@@ -27,3 +14,5 @@ all: $(OBJQ) $(OBJS)
 .PHONY: clean
 clean: 
 	-rm -rf *.o
+
+sinclude .dep
