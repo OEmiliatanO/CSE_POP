@@ -8,8 +8,8 @@ dep:
 	gcc -M $(SOURCE) > .dep
 
 all: $(OBJQ) $(OBJS)
-	$(CC) -o main_queue $(OBJQ)
-	$(CC) -o main_stack $(OBJS)
+	$(CC) $(FLAG) -o main_queue $(OBJQ)
+	$(CC) $(FLAG) -o main_stack $(OBJS)
 
 .PHONY: clean
 clean: 

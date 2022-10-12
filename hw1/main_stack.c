@@ -5,27 +5,40 @@
 
 int main()
 {
-	stack* s;
-	s = new_stack();
-	int x;
-	char c;
-	while(~scanf("%d%c", &x, &c)) { spush(s, x); if (c == '\n') break; }
-	while(s->size) { printf("%d ", stop(s)); spop(s); }
-	/*
-	while (~scanf("%c%*c", &c))
+	stack* st;
+	st = new_stack();
+	int op;
+	while(1)
 	{
-		if (c == 'h')
+		printf("1:push, 2:pop, 3:peek 4:exit\nwhat's ur operation: ");
+		scanf("%d", &op);
+		if (op == 1)
 		{
-			scanf("%d%*c", &x);
-			spush(s, x);
+			int x;
+			printf("value to push: ");
+			scanf("%d", &x);
+			spush(st, x);
 		}
-		else if (c == 'p')
+		else if (op == 2)
 		{
-			printf("%d\n", stop(s));
-			spop(s);
+			if (st->size)
+			{
+				printf("value returned: %d\n", stop(st));
+				spop(st);
+			}
+			else
+				printf("empty\n");
 		}
+		else if (op == 3)
+		{
+			if (st->size)
+				printf("value returned: %d\n", stop(st));
+			else
+				printf("empty\n");
+		}
+		else if (op == 4)
+			break;
 	}
-	*/
 	puts("");
 
 	return 0;

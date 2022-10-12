@@ -7,25 +7,38 @@ int main()
 {
 	queue* q;
 	q = new_queue();
-	int x;
-	char c;
-	while(~scanf("%d%c", &x, &c)) { qpush(q, x); if (c == '\n') break; }
-	while(q->size) { printf("%d ", qtop(q)); qpop(q); }
-	/*
-	while (~scanf("%c%*c", &c))
+	int op;
+	while(1)
 	{
-		if (c == 'h')
+		printf("1:enqueue, 2:dequeue, 3:peek 4:exit\nwhat's ur operation: ");
+		scanf("%d", &op);
+		if (op == 1)
 		{
-			scanf("%d%*c", &x);
+			int x;
+			printf("value to enqueue: ");
+			scanf("%d", &x);
 			qpush(q, x);
 		}
-		else if (c == 'p')
+		else if (op == 2)
 		{
-			printf("%d\n", qtop(q));
-			qpop(q);
+			if (q->size)
+			{
+				printf("value returned: %d\n", qtop(q));
+				qpop(q);
+			}
+			else
+				printf("empty\n");
 		}
+		else if (op == 3)
+		{
+			if (q->size)
+				printf("value returned: %d\n", qtop(q));
+			else
+				printf("empty\n");
+		}
+		else if (op == 4)
+			break;
 	}
-	*/
 	puts("");
 
 	return 0;
