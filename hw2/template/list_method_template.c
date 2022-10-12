@@ -1,27 +1,26 @@
-#include "../src/list_ptr_to_long.h"
+#include "../src/list_<type>.h"
 #include "../src/mm.h"
-typedef long* ptr_to_long;
-list_ptr_to_long * new_list_ptr_to_long()
+list_<type> * new_list_<type>()
 {
-	list_ptr_to_long * l = (list_ptr_to_long *) mymalloc(sizeof(list_ptr_to_long));
+	list_<type> * l = (list_<type> *) mymalloc(sizeof(list_<type>));
 	l->size = 0;
 	l->head = l->tail = NULL;
 	return l;
 }
 
-static void _insert(node_ptr_to_long * now, ptr_to_long val)
+static void _insert(node_<type> * now, <type> val)
 {
 	if (!now) return;
 	if (now->nex == NULL)
 	{
-		now->nex = (node_ptr_to_long *)mymalloc(sizeof(list_ptr_to_long));
+		now->nex = (node_<type> *)mymalloc(sizeof(list_<type>));
 		now->nex->val = val;
 		now->nex->nex = NULL;
 		now->nex->prev = now;
 	}
 	else
 	{
-		node_ptr_to_long * tmp = (node_ptr_to_long *)mymalloc(sizeof(list_ptr_to_long));
+		node_<type> * tmp = (node_<type> *)mymalloc(sizeof(list_<type>));
 		tmp->val = val;
 		tmp->nex = now->nex;
 		tmp->prev = now;
@@ -30,7 +29,7 @@ static void _insert(node_ptr_to_long * now, ptr_to_long val)
 	}
 }
 
-static void _remove(node_ptr_to_long * now)
+static void _remove(node_<type> * now)
 {
 	if (!now) return;
 	if (now->nex == NULL && now->prev)
@@ -45,16 +44,16 @@ static void _remove(node_ptr_to_long * now)
 	myfree(now);
 }
 
-void list_ptr_to_long_insert(list_ptr_to_long * li, size_t pos, ptr_to_long val)
+void list_<type>_insert(list_<type> * li, size_t pos, <type> val)
 {
 	if (!li) return;
 	if (li->size == 0)
 	{
 		++li->size;
-		li->head = (node_ptr_to_long *)mymalloc(sizeof(node_ptr_to_long));
+		li->head = (node_<type> *)mymalloc(sizeof(node_<type>));
 		li->head->val = val;
 		li->head->prev = NULL;
-		li->head->nex = (node_ptr_to_long *)mymalloc(sizeof(node_ptr_to_long));
+		li->head->nex = (node_<type> *)mymalloc(sizeof(node_<type>));
 		li->tail = li->head->nex;
 		li->tail->val = 0;
 		li->tail->prev = li->head;
@@ -70,12 +69,12 @@ void list_ptr_to_long_insert(list_ptr_to_long * li, size_t pos, ptr_to_long val)
 	}
 	
 	++li->size;
-	node_ptr_to_long * p = li->head;
+	node_<type> * p = li->head;
 	for(size_t i = 0; i < pos; ++i) p = p->nex;
 	_insert(p, val);
 }
 
-void list_ptr_to_long_remove(list_ptr_to_long * li, size_t pos)
+void list_<type>_remove(list_<type> * li, size_t pos)
 {
 	if (!li) return;
 	if (pos >= li->size) return;
@@ -94,16 +93,16 @@ void list_ptr_to_long_remove(list_ptr_to_long * li, size_t pos)
 	}
 	
 	--li->size;
-	node_ptr_to_long * p = li->head;
+	node_<type> * p = li->head;
 	for(size_t i = 0; i < pos; ++i) p = p->nex;
 	_remove(p);
 }
 
-void list_ptr_to_long_push_front(list_ptr_to_long * li, ptr_to_long val)
+void list_<type>_push_front(list_<type> * li, <type> val)
 {
 	if (!li) return;
-	if (li->size == 0) { list_ptr_to_long_insert(li, 0, val); return; }
-	node_ptr_to_long * tmp = (node_ptr_to_long *)mymalloc(sizeof(node_ptr_to_long));
+	if (li->size == 0) { list_<type>_insert(li, 0, val); return; }
+	node_<type> * tmp = (node_<type> *)mymalloc(sizeof(node_<type>));
 	tmp->nex = li->head;
 	tmp->prev = NULL;
 	tmp->val = val;
@@ -112,23 +111,23 @@ void list_ptr_to_long_push_front(list_ptr_to_long * li, ptr_to_long val)
 	++li->size;
 }
 
-void list_ptr_to_long_push_back(list_ptr_to_long * li, ptr_to_long val)
+void list_<type>_push_back(list_<type> * li, <type> val)
 {
 	if (!li) return;
-	if (li->size == 0) { list_ptr_to_long_insert(li, 0, val); return; }
-	list_ptr_to_long_insert(li, li->size - 1, val);
+	if (li->size == 0) { list_<type>_insert(li, 0, val); return; }
+	list_<type>_insert(li, li->size - 1, val);
 }
 
-void list_ptr_to_long_pop_front(list_ptr_to_long * li)
+void list_<type>_pop_front(list_<type> * li)
 {
 	if (!li) return;
 	if (li->size == 0) return;
-	list_ptr_to_long_remove(li, 0);
+	list_<type>_remove(li, 0);
 }
 
-void list_ptr_to_long_pop_back(list_ptr_to_long * li)
+void list_<type>_pop_back(list_<type> * li)
 {
 	if (!li) return;
 	if (li->size == 0) return;
-	list_ptr_to_long_remove(li, li->size - 1);
+	list_<type>_remove(li, li->size - 1);
 }

@@ -5,58 +5,37 @@ pt=("char*" "short*" "int*" "long*" "float*" "double*")
 
 for ((c=0;c<3;++c)); do
 	for ((i=0;i<6;++i)); do
-		mkdir ${container[$c]}_${types[$i]} 2>/dev/null
-		mkdir ${container[$c]}_${pttypes[$i]} 2>/dev/null
-		printf "#include \"gen/${container[$c]}_gen.h\"\ndefine_${container[$c]}(${types[$i]})\n" >> ${container[$c]}_${types[$i]}_gen.h
+		SOURCE_C=./template/${container[$c]}_method_template.c
+		SOURCE_H=./template/${container[$c]}_template.h
+		DIR=./${container[$c]}_${types[$i]}
+		TARGET_C=$DIR.c
+		TARGET_H=$DIR.h
+		mkdir $DIR 2>/dev/null
+		cp $SOURCE_C $TARGET_C
+		sed -i "s/<type>/${types[$i]}/g" $TARGET_C
+		cp $SOURCE_H $TARGET_H
+		sed -i "s/<type>/${types[$i]}/g" $TARGET_H
+		mv $TARGET_H src/
+		mv $TARGET_C $DIR/
+	done
+done
+for ((c=0;c<3;++c)); do
+	for ((i=0;i<6;++i)); do
+		SOURCE_C=./template/${container[$c]}_method_template.c
+		SOURCE_H=./template/${container[$c]}_template.h
+		DIR=./${container[$c]}_${pttypes[$i]}
+		TARGET_C=$DIR.c
+		TARGET_H=$DIR.h
+		mkdir $DIR 2>/dev/null
+		cp $SOURCE_C $TARGET_C
+		sed -i "s/<type>/${pttypes[$i]}/g" $TARGET_C
+		sed -i "3s/^/typedef ${pt[$i]} ${pttypes[$i]};\n/" $TARGET_C
+		cp $SOURCE_H $TARGET_H
+		sed -i "s/<type>/${pttypes[$i]}/g" $TARGET_H
+		sed -i "3s/^/typedef ${pt[$i]} ${pttypes[$i]};\n/" $TARGET_H
 
-		printf "#include \"gen/${container[$c]}_gen.h\"\ndefine_${container[$c]}(${pttypes[$i]})\n" >> ${container[$c]}_${pttypes[$i]}_gen.h
-
-		printf "#include \"gen/${container[$c]}_method_gen.h\"\ndefine_${container[$c]}_method(${types[$i]})" > ${container[$c]}_${types[$i]}_gen.c
-		printf "#include \"gen/${container[$c]}_method_gen.h\"\ndefine_${container[$c]}_method(${pttypes[$i]})" > ${container[$c]}_${pttypes[$i]}_gen.c
-		
-		printf "#include <stddef.h>\n" > ${container[$c]}_${types[$i]}_.h
-		printf "#include <stddef.h>\n" > ${container[$c]}_${pttypes[$i]}_.h
-		
-		printf "#include <stddef.h>\n" > ${container[$c]}_${types[$i]}.c
-		printf "#include <stddef.h>\n" > ${container[$c]}_${pttypes[$i]}.c
-
-		printf "#include \"../src/${container[$c]}_${types[$i]}.h\"\n" >> ${container[$c]}_${types[$i]}.c
-		printf "#include \"../src/${container[$c]}_${pttypes[$i]}.h\"\n" >> ${container[$c]}_${pttypes[$i]}.c
-
-		printf "#include \"../src/mm.h\"\n" >> ${container[$c]}_${types[$i]}.c
-		printf "#include \"../src/mm.h\"\n" >> ${container[$c]}_${pttypes[$i]}.c
-
-		if [ "${container[$c]}" != "list" ];
-		then
-			printf "#include \"../src/list_${types[$i]}.h\"\n" >> ${container[$c]}_${types[$i]}.c
-			printf "#include \"../src/list_${pttypes[$i]}.h\"\n" >> ${container[$c]}_${pttypes[$i]}.c
-			printf "#include \"list_${types[$i]}.h\"\n" >> ${container[$c]}_${types[$i]}_.h
-			printf "#include \"list_${pttypes[$i]}.h\"\n" >> ${container[$c]}_${pttypes[$i]}_.h
-		fi
-
-		printf "typedef ${pt[$i]} ${pttypes[$i]};\n" >> ${container[$c]}_${pttypes[$i]}_.h
-		printf "typedef ${pt[$i]} ${pttypes[$i]};\n" >> ${container[$c]}_${pttypes[$i]}.c
-		
-		gcc -E ${container[$c]}_${types[$i]}_gen.h >> ${container[$c]}_${types[$i]}_.h
-		gcc -E ${container[$c]}_${pttypes[$i]}_gen.h >> ${container[$c]}_${pttypes[$i]}_.h
-		{ printf "#ifndef __${container[$c]}_${types[$i]}_H__\n#define __${container[$c]}_${types[$i]}_H__\n"; cat ${container[$c]}_${types[$i]}_.h; } > ${container[$c]}_${types[$i]}.h
-		{ printf "#ifndef __${container[$c]}_${pttypes[$i]}_H__\n#define __${container[$c]}_${pttypes[$i]}_H__\n"; cat ${container[$c]}_${pttypes[$i]}_.h; } > ${container[$c]}_${pttypes[$i]}.h
-		printf "#endif" >> ${container[$c]}_${types[$i]}.h
-		printf "#endif" >> ${container[$c]}_${pttypes[$i]}.h
-		mv ${container[$c]}_${types[$i]}.h src/
-		mv ${container[$c]}_${pttypes[$i]}.h src/
-		gcc -E ${container[$c]}_${types[$i]}_gen.c >> ${container[$c]}_${types[$i]}.c
-		gcc -E ${container[$c]}_${pttypes[$i]}_gen.c >> ${container[$c]}_${pttypes[$i]}.c
-		
-		mv ${container[$c]}_${types[$i]}.c ${container[$c]}_${types[$i]}/
-		mv ${container[$c]}_${pttypes[$i]}.c ${container[$c]}_${pttypes[$i]}/
-
-		rm ${container[$c]}_${types[$i]}_gen.h
-		rm ${container[$c]}_${pttypes[$i]}_gen.h
-		rm ${container[$c]}_${types[$i]}_gen.c
-		rm ${container[$c]}_${pttypes[$i]}_gen.c
-		rm ${container[$c]}_${types[$i]}_.h
-		rm ${container[$c]}_${pttypes[$i]}_.h
+		mv $TARGET_H src/
+		mv $TARGET_C $DIR/
 	done
 done
 
