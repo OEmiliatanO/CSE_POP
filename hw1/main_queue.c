@@ -10,7 +10,7 @@ int main()
 	int op;
 	while(1)
 	{
-		printf("1:enqueue, 2:dequeue, 3:peek 4:exit\nwhat's ur operation: ");
+		printf("\n1:enqueue, 2:dequeue, 3:peek 4:exit\nwhat's ur operation: ");
 		scanf("%d", &op);
 		if (op == 1)
 		{
