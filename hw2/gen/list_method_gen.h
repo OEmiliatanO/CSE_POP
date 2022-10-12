@@ -7,7 +7,7 @@ list_##__TYPE__ * new_list_##__TYPE__()\
 	return l;\
 }\
 \
-void _insert(node_##__TYPE__ * now, __TYPE__ val)\
+static void _insert(node_##__TYPE__ * now, __TYPE__ val)\
 {\
 	if (!now) return;\
 	if (now->nex == NULL)\
@@ -28,7 +28,7 @@ void _insert(node_##__TYPE__ * now, __TYPE__ val)\
 	}\
 }\
 \
-void _remove(node_##__TYPE__ * now)\
+static void _remove(node_##__TYPE__ * now)\
 {\
 	if (!now) return;\
 	if (now->nex == NULL && now->prev)\

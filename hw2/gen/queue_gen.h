@@ -7,5 +7,5 @@ typedef struct queue_##__TYPE__\
 \
 queue_##__TYPE__ * new_queue_##__TYPE__();\
 void queue_##__TYPE__##_push(queue_##__TYPE__ *, __TYPE__);\
-int queue_##__TYPE__##_top(queue_##__TYPE__ *);\
-void queue_##_TYPE__##_pop(queue_##__TYPE__ *);
+__TYPE__ queue_##__TYPE__##_top(queue_##__TYPE__ *);\
+void queue_##__TYPE__##_pop(queue_##__TYPE__ *);

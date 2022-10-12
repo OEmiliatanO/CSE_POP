@@ -10,5 +10,5 @@
 # 1 "stack_long_gen.h"
 # 1 "gen/stack_gen.h" 1
 # 2 "stack_long_gen.h" 2
-typedef struct stack_long{ size_t size; list_long * List;}stack_long;stack_long * new_stack_long();void stack_long_push(stack_long *, long);void stack_long_pop(stack_long *);int stack_long_top(stack_long *);
+typedef struct stack_long{ size_t size; list_long * List;}stack_long;stack_long * new_stack_long();void stack_long_push(stack_long *, long);void stack_long_pop(stack_long *);long stack_long_top(stack_long *);
 #endif

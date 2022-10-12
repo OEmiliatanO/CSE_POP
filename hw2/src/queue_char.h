@@ -10,5 +10,5 @@
 # 1 "queue_char_gen.h"
 # 1 "gen/queue_gen.h" 1
 # 2 "queue_char_gen.h" 2
-typedef struct queue_char{ size_t size; list_char * List;}queue_char;queue_char * new_queue_char();void queue_char_push(queue_char *, char);int queue_char_top(queue_char *);void queue__TYPE___pop(queue_char *);
+typedef struct queue_char{ size_t size; list_char * List;}queue_char;queue_char * new_queue_char();void queue_char_push(queue_char *, char);char queue_char_top(queue_char *);void queue_char_pop(queue_char *);
 #endif

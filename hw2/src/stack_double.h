@@ -10,5 +10,5 @@
 # 1 "stack_double_gen.h"
 # 1 "gen/stack_gen.h" 1
 # 2 "stack_double_gen.h" 2
-typedef struct stack_double{ size_t size; list_double * List;}stack_double;stack_double * new_stack_double();void stack_double_push(stack_double *, double);void stack_double_pop(stack_double *);int stack_double_top(stack_double *);
+typedef struct stack_double{ size_t size; list_double * List;}stack_double;stack_double * new_stack_double();void stack_double_push(stack_double *, double);void stack_double_pop(stack_double *);double stack_double_top(stack_double *);
 #endif

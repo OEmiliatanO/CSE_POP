@@ -10,5 +10,5 @@
 # 1 "stack_char_gen.h"
 # 1 "gen/stack_gen.h" 1
 # 2 "stack_char_gen.h" 2
-typedef struct stack_char{ size_t size; list_char * List;}stack_char;stack_char * new_stack_char();void stack_char_push(stack_char *, char);void stack_char_pop(stack_char *);int stack_char_top(stack_char *);
+typedef struct stack_char{ size_t size; list_char * List;}stack_char;stack_char * new_stack_char();void stack_char_push(stack_char *, char);void stack_char_pop(stack_char *);char stack_char_top(stack_char *);
 #endif

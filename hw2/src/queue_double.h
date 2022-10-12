@@ -10,5 +10,5 @@
 # 1 "queue_double_gen.h"
 # 1 "gen/queue_gen.h" 1
 # 2 "queue_double_gen.h" 2
-typedef struct queue_double{ size_t size; list_double * List;}queue_double;queue_double * new_queue_double();void queue_double_push(queue_double *, double);int queue_double_top(queue_double *);void queue__TYPE___pop(queue_double *);
+typedef struct queue_double{ size_t size; list_double * List;}queue_double;queue_double * new_queue_double();void queue_double_push(queue_double *, double);double queue_double_top(queue_double *);void queue_double_pop(queue_double *);
 #endif
