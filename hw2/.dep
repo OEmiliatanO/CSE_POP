@@ -1,824 +1,217 @@
-mm.o: mm.c /usr/include/stdc-predef.h src/mm.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h /usr/include/endian.h \
- /usr/include/x86_64-linux-gnu/bits/endian.h \
- /usr/include/x86_64-linux-gnu/bits/endianness.h \
- /usr/include/x86_64-linux-gnu/bits/byteswap.h \
- /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
- /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
- /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
- /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
- /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
- /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
- /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
-main_stack_char.o: stack_char/main_stack_char.c \
- /usr/include/stdc-predef.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
- stack_char/../src/mm.h stack_char/../src/stack_char.h \
- stack_char/../src/list_char.h
-stack_char.o: stack_char/stack_char.c /usr/include/stdc-predef.h \
- stack_char/../src/stack_char.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+mm.o: mm.c src/mm.h
+list_char.o: list_char/list_char.c list_char/../src/list_char.h \
+ list_char/../src/mm.h
+list_short.o: list_short/list_short.c list_short/../src/list_short.h \
+ list_short/../src/mm.h
+list_int.o: list_int/list_int.c list_int/../src/list_int.h \
+ list_int/../src/mm.h
+list_long.o: list_long/list_long.c list_long/../src/list_long.h \
+ list_long/../src/mm.h
+list_float.o: list_float/list_float.c list_float/../src/list_float.h \
+ list_float/../src/mm.h
+list_double.o: list_double/list_double.c list_double/../src/list_double.h \
+ list_double/../src/mm.h
+list_ptr_to_char.o: list_ptr_to_char/list_ptr_to_char.c \
+ list_ptr_to_char/../src/list_ptr_to_char.h list_ptr_to_char/../src/mm.h
+list_ptr_to_short.o: list_ptr_to_short/list_ptr_to_short.c \
+ list_ptr_to_short/../src/list_ptr_to_short.h \
+ list_ptr_to_short/../src/mm.h
+list_ptr_to_int.o: list_ptr_to_int/list_ptr_to_int.c \
+ list_ptr_to_int/../src/list_ptr_to_int.h list_ptr_to_int/../src/mm.h
+list_ptr_to_long.o: list_ptr_to_long/list_ptr_to_long.c \
+ list_ptr_to_long/../src/list_ptr_to_long.h list_ptr_to_long/../src/mm.h
+list_ptr_to_float.o: list_ptr_to_float/list_ptr_to_float.c \
+ list_ptr_to_float/../src/list_ptr_to_float.h \
+ list_ptr_to_float/../src/mm.h
+list_ptr_to_double.o: list_ptr_to_double/list_ptr_to_double.c \
+ list_ptr_to_double/../src/list_ptr_to_double.h \
+ list_ptr_to_double/../src/mm.h
+main_stack_char.o: stack_char/main_stack_char.c stack_char/../src/mm.h \
+ stack_char/../src/stack_char.h stack_char/../src/list_char.h
+stack_char.o: stack_char/stack_char.c stack_char/../src/stack_char.h \
  stack_char/../src/list_char.h stack_char/../src/list_char.h \
  stack_char/../src/mm.h
 main_stack_short.o: stack_short/main_stack_short.c \
- /usr/include/stdc-predef.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
  stack_short/../src/mm.h stack_short/../src/list_short.h \
  stack_short/../src/stack_short.h stack_short/../src/list_short.h
-stack_short.o: stack_short/stack_short.c /usr/include/stdc-predef.h \
- stack_short/../src/stack_short.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+stack_short.o: stack_short/stack_short.c stack_short/../src/stack_short.h \
  stack_short/../src/list_short.h stack_short/../src/list_short.h \
  stack_short/../src/mm.h
-main_stack_int.o: stack_int/main_stack_int.c /usr/include/stdc-predef.h \
- /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h stack_int/../src/mm.h \
+main_stack_int.o: stack_int/main_stack_int.c stack_int/../src/mm.h \
  stack_int/../src/list_int.h stack_int/../src/stack_int.h \
  stack_int/../src/list_int.h
-stack_int.o: stack_int/stack_int.c /usr/include/stdc-predef.h \
- stack_int/../src/stack_int.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+stack_int.o: stack_int/stack_int.c stack_int/../src/stack_int.h \
  stack_int/../src/list_int.h stack_int/../src/list_int.h \
  stack_int/../src/mm.h
-main_stack_long.o: stack_long/main_stack_long.c \
- /usr/include/stdc-predef.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
- stack_long/../src/mm.h stack_long/../src/list_long.h \
- stack_long/../src/stack_long.h stack_long/../src/list_long.h
-stack_long.o: stack_long/stack_long.c /usr/include/stdc-predef.h \
- stack_long/../src/stack_long.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+main_stack_long.o: stack_long/main_stack_long.c stack_long/../src/mm.h \
+ stack_long/../src/list_long.h stack_long/../src/stack_long.h \
+ stack_long/../src/list_long.h
+stack_long.o: stack_long/stack_long.c stack_long/../src/stack_long.h \
  stack_long/../src/list_long.h stack_long/../src/list_long.h \
  stack_long/../src/mm.h
 main_stack_float.o: stack_float/main_stack_float.c \
- /usr/include/stdc-predef.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
  stack_float/../src/mm.h stack_float/../src/list_float.h \
  stack_float/../src/stack_float.h stack_float/../src/list_float.h
-stack_float.o: stack_float/stack_float.c /usr/include/stdc-predef.h \
- stack_float/../src/stack_float.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+stack_float.o: stack_float/stack_float.c stack_float/../src/stack_float.h \
  stack_float/../src/list_float.h stack_float/../src/list_float.h \
  stack_float/../src/mm.h
 main_stack_double.o: stack_double/main_stack_double.c \
- /usr/include/stdc-predef.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
  stack_double/../src/mm.h stack_double/../src/list_double.h \
  stack_double/../src/stack_double.h stack_double/../src/list_double.h
-stack_double.o: stack_double/stack_double.c /usr/include/stdc-predef.h \
- stack_double/../src/stack_double.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- stack_double/../src/list_double.h stack_double/../src/list_double.h \
- stack_double/../src/mm.h
+stack_double.o: stack_double/stack_double.c \
+ stack_double/../src/stack_double.h stack_double/../src/list_double.h \
+ stack_double/../src/list_double.h stack_double/../src/mm.h
 main_stack_ptr_to_char.o: stack_ptr_to_char/main_stack_ptr_to_char.c \
- /usr/include/stdc-predef.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
  stack_ptr_to_char/../src/mm.h \
  stack_ptr_to_char/../src/list_ptr_to_char.h \
  stack_ptr_to_char/../src/stack_ptr_to_char.h \
  stack_ptr_to_char/../src/list_ptr_to_char.h
 stack_ptr_to_char.o: stack_ptr_to_char/stack_ptr_to_char.c \
- /usr/include/stdc-predef.h stack_ptr_to_char/../src/stack_ptr_to_char.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+ stack_ptr_to_char/../src/stack_ptr_to_char.h \
  stack_ptr_to_char/../src/list_ptr_to_char.h \
  stack_ptr_to_char/../src/list_ptr_to_char.h \
  stack_ptr_to_char/../src/mm.h
 main_stack_ptr_to_short.o: stack_ptr_to_short/main_stack_ptr_to_short.c \
- /usr/include/stdc-predef.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
  stack_ptr_to_short/../src/mm.h \
  stack_ptr_to_short/../src/list_ptr_to_short.h \
  stack_ptr_to_short/../src/stack_ptr_to_short.h \
  stack_ptr_to_short/../src/list_ptr_to_short.h
 stack_ptr_to_short.o: stack_ptr_to_short/stack_ptr_to_short.c \
- /usr/include/stdc-predef.h \
  stack_ptr_to_short/../src/stack_ptr_to_short.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
  stack_ptr_to_short/../src/list_ptr_to_short.h \
  stack_ptr_to_short/../src/list_ptr_to_short.h \
  stack_ptr_to_short/../src/mm.h
 main_stack_ptr_to_int.o: stack_ptr_to_int/main_stack_ptr_to_int.c \
- /usr/include/stdc-predef.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
  stack_ptr_to_int/../src/mm.h stack_ptr_to_int/../src/list_ptr_to_int.h \
  stack_ptr_to_int/../src/stack_ptr_to_int.h \
  stack_ptr_to_int/../src/list_ptr_to_int.h
 stack_ptr_to_int.o: stack_ptr_to_int/stack_ptr_to_int.c \
- /usr/include/stdc-predef.h stack_ptr_to_int/../src/stack_ptr_to_int.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+ stack_ptr_to_int/../src/stack_ptr_to_int.h \
  stack_ptr_to_int/../src/list_ptr_to_int.h \
  stack_ptr_to_int/../src/list_ptr_to_int.h stack_ptr_to_int/../src/mm.h
 main_stack_ptr_to_long.o: stack_ptr_to_long/main_stack_ptr_to_long.c \
- /usr/include/stdc-predef.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
  stack_ptr_to_long/../src/mm.h \
  stack_ptr_to_long/../src/list_ptr_to_long.h \
  stack_ptr_to_long/../src/stack_ptr_to_long.h \
  stack_ptr_to_long/../src/list_ptr_to_long.h
 stack_ptr_to_long.o: stack_ptr_to_long/stack_ptr_to_long.c \
- /usr/include/stdc-predef.h stack_ptr_to_long/../src/stack_ptr_to_long.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+ stack_ptr_to_long/../src/stack_ptr_to_long.h \
  stack_ptr_to_long/../src/list_ptr_to_long.h \
  stack_ptr_to_long/../src/list_ptr_to_long.h \
  stack_ptr_to_long/../src/mm.h
 main_stack_ptr_to_float.o: stack_ptr_to_float/main_stack_ptr_to_float.c \
- /usr/include/stdc-predef.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
  stack_ptr_to_float/../src/mm.h \
  stack_ptr_to_float/../src/list_ptr_to_float.h \
  stack_ptr_to_float/../src/stack_ptr_to_float.h \
  stack_ptr_to_float/../src/list_ptr_to_float.h
 stack_ptr_to_float.o: stack_ptr_to_float/stack_ptr_to_float.c \
- /usr/include/stdc-predef.h \
  stack_ptr_to_float/../src/stack_ptr_to_float.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
  stack_ptr_to_float/../src/list_ptr_to_float.h \
  stack_ptr_to_float/../src/list_ptr_to_float.h \
  stack_ptr_to_float/../src/mm.h
 main_stack_ptr_to_double.o: \
  stack_ptr_to_double/main_stack_ptr_to_double.c \
- /usr/include/stdc-predef.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
  stack_ptr_to_double/../src/mm.h \
  stack_ptr_to_double/../src/list_ptr_to_double.h \
  stack_ptr_to_double/../src/stack_ptr_to_double.h \
  stack_ptr_to_double/../src/list_ptr_to_double.h
 stack_ptr_to_double.o: stack_ptr_to_double/stack_ptr_to_double.c \
- /usr/include/stdc-predef.h \
  stack_ptr_to_double/../src/stack_ptr_to_double.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
  stack_ptr_to_double/../src/list_ptr_to_double.h \
  stack_ptr_to_double/../src/list_ptr_to_double.h \
  stack_ptr_to_double/../src/mm.h
-main_queue_char.o: queue_char/main_queue_char.c \
- /usr/include/stdc-predef.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
- queue_char/../src/mm.h queue_char/../src/list_char.h \
- queue_char/../src/queue_char.h queue_char/../src/list_char.h
-queue_char.o: queue_char/queue_char.c /usr/include/stdc-predef.h \
- queue_char/../src/queue_char.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+main_queue_char.o: queue_char/main_queue_char.c queue_char/../src/mm.h \
+ queue_char/../src/list_char.h queue_char/../src/queue_char.h \
+ queue_char/../src/list_char.h
+queue_char.o: queue_char/queue_char.c queue_char/../src/queue_char.h \
  queue_char/../src/list_char.h queue_char/../src/list_char.h \
  queue_char/../src/mm.h
 main_queue_short.o: queue_short/main_queue_short.c \
- /usr/include/stdc-predef.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
  queue_short/../src/mm.h queue_short/../src/list_short.h \
  queue_short/../src/queue_short.h queue_short/../src/list_short.h
-queue_short.o: queue_short/queue_short.c /usr/include/stdc-predef.h \
- queue_short/../src/queue_short.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+queue_short.o: queue_short/queue_short.c queue_short/../src/queue_short.h \
  queue_short/../src/list_short.h queue_short/../src/list_short.h \
  queue_short/../src/mm.h
-main_queue_int.o: queue_int/main_queue_int.c /usr/include/stdc-predef.h \
- /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h queue_int/../src/mm.h \
+main_queue_int.o: queue_int/main_queue_int.c queue_int/../src/mm.h \
  queue_int/../src/list_int.h queue_int/../src/queue_int.h \
  queue_int/../src/list_int.h
-queue_int.o: queue_int/queue_int.c /usr/include/stdc-predef.h \
- queue_int/../src/queue_int.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+queue_int.o: queue_int/queue_int.c queue_int/../src/queue_int.h \
  queue_int/../src/list_int.h queue_int/../src/list_int.h \
  queue_int/../src/mm.h
-main_queue_long.o: queue_long/main_queue_long.c \
- /usr/include/stdc-predef.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
- queue_long/../src/mm.h queue_long/../src/list_long.h \
- queue_long/../src/queue_long.h queue_long/../src/list_long.h
-queue_long.o: queue_long/queue_long.c /usr/include/stdc-predef.h \
- queue_long/../src/queue_long.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+main_queue_long.o: queue_long/main_queue_long.c queue_long/../src/mm.h \
+ queue_long/../src/list_long.h queue_long/../src/queue_long.h \
+ queue_long/../src/list_long.h
+queue_long.o: queue_long/queue_long.c queue_long/../src/queue_long.h \
  queue_long/../src/list_long.h queue_long/../src/list_long.h \
  queue_long/../src/mm.h
 main_queue_float.o: queue_float/main_queue_float.c \
- /usr/include/stdc-predef.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
  queue_float/../src/mm.h queue_float/../src/list_float.h \
  queue_float/../src/queue_float.h queue_float/../src/list_float.h
-queue_float.o: queue_float/queue_float.c /usr/include/stdc-predef.h \
- queue_float/../src/queue_float.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+queue_float.o: queue_float/queue_float.c queue_float/../src/queue_float.h \
  queue_float/../src/list_float.h queue_float/../src/list_float.h \
  queue_float/../src/mm.h
 main_queue_double.o: queue_double/main_queue_double.c \
- /usr/include/stdc-predef.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
  queue_double/../src/mm.h queue_double/../src/list_double.h \
  queue_double/../src/queue_double.h queue_double/../src/list_double.h
-queue_double.o: queue_double/queue_double.c /usr/include/stdc-predef.h \
- queue_double/../src/queue_double.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- queue_double/../src/list_double.h queue_double/../src/list_double.h \
- queue_double/../src/mm.h
+queue_double.o: queue_double/queue_double.c \
+ queue_double/../src/queue_double.h queue_double/../src/list_double.h \
+ queue_double/../src/list_double.h queue_double/../src/mm.h
 main_queue_ptr_to_char.o: queue_ptr_to_char/main_queue_ptr_to_char.c \
- /usr/include/stdc-predef.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
  queue_ptr_to_char/../src/mm.h \
  queue_ptr_to_char/../src/list_ptr_to_char.h \
  queue_ptr_to_char/../src/queue_ptr_to_char.h \
  queue_ptr_to_char/../src/list_ptr_to_char.h
 queue_ptr_to_char.o: queue_ptr_to_char/queue_ptr_to_char.c \
- /usr/include/stdc-predef.h queue_ptr_to_char/../src/queue_ptr_to_char.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+ queue_ptr_to_char/../src/queue_ptr_to_char.h \
  queue_ptr_to_char/../src/list_ptr_to_char.h \
  queue_ptr_to_char/../src/list_ptr_to_char.h \
  queue_ptr_to_char/../src/mm.h
 main_queue_ptr_to_short.o: queue_ptr_to_short/main_queue_ptr_to_short.c \
- /usr/include/stdc-predef.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
  queue_ptr_to_short/../src/mm.h \
  queue_ptr_to_short/../src/list_ptr_to_short.h \
  queue_ptr_to_short/../src/queue_ptr_to_short.h \
  queue_ptr_to_short/../src/list_ptr_to_short.h
 queue_ptr_to_short.o: queue_ptr_to_short/queue_ptr_to_short.c \
- /usr/include/stdc-predef.h \
  queue_ptr_to_short/../src/queue_ptr_to_short.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
  queue_ptr_to_short/../src/list_ptr_to_short.h \
  queue_ptr_to_short/../src/list_ptr_to_short.h \
  queue_ptr_to_short/../src/mm.h
 main_queue_ptr_to_int.o: queue_ptr_to_int/main_queue_ptr_to_int.c \
- /usr/include/stdc-predef.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
  queue_ptr_to_int/../src/mm.h queue_ptr_to_int/../src/list_ptr_to_int.h \
  queue_ptr_to_int/../src/queue_ptr_to_int.h \
  queue_ptr_to_int/../src/list_ptr_to_int.h
 queue_ptr_to_int.o: queue_ptr_to_int/queue_ptr_to_int.c \
- /usr/include/stdc-predef.h queue_ptr_to_int/../src/queue_ptr_to_int.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+ queue_ptr_to_int/../src/queue_ptr_to_int.h \
  queue_ptr_to_int/../src/list_ptr_to_int.h \
  queue_ptr_to_int/../src/list_ptr_to_int.h queue_ptr_to_int/../src/mm.h
 main_queue_ptr_to_long.o: queue_ptr_to_long/main_queue_ptr_to_long.c \
- /usr/include/stdc-predef.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
  queue_ptr_to_long/../src/mm.h \
  queue_ptr_to_long/../src/list_ptr_to_long.h \
  queue_ptr_to_long/../src/queue_ptr_to_long.h \
  queue_ptr_to_long/../src/list_ptr_to_long.h
 queue_ptr_to_long.o: queue_ptr_to_long/queue_ptr_to_long.c \
- /usr/include/stdc-predef.h queue_ptr_to_long/../src/queue_ptr_to_long.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+ queue_ptr_to_long/../src/queue_ptr_to_long.h \
  queue_ptr_to_long/../src/list_ptr_to_long.h \
  queue_ptr_to_long/../src/list_ptr_to_long.h \
  queue_ptr_to_long/../src/mm.h
 main_queue_ptr_to_float.o: queue_ptr_to_float/main_queue_ptr_to_float.c \
- /usr/include/stdc-predef.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
  queue_ptr_to_float/../src/mm.h \
  queue_ptr_to_float/../src/list_ptr_to_float.h \
  queue_ptr_to_float/../src/queue_ptr_to_float.h \
  queue_ptr_to_float/../src/list_ptr_to_float.h
 queue_ptr_to_float.o: queue_ptr_to_float/queue_ptr_to_float.c \
- /usr/include/stdc-predef.h \
  queue_ptr_to_float/../src/queue_ptr_to_float.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
  queue_ptr_to_float/../src/list_ptr_to_float.h \
  queue_ptr_to_float/../src/list_ptr_to_float.h \
  queue_ptr_to_float/../src/mm.h
 main_queue_ptr_to_double.o: \
  queue_ptr_to_double/main_queue_ptr_to_double.c \
- /usr/include/stdc-predef.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
  queue_ptr_to_double/../src/mm.h \
  queue_ptr_to_double/../src/list_ptr_to_double.h \
  queue_ptr_to_double/../src/queue_ptr_to_double.h \
  queue_ptr_to_double/../src/list_ptr_to_double.h
 queue_ptr_to_double.o: queue_ptr_to_double/queue_ptr_to_double.c \
- /usr/include/stdc-predef.h \
  queue_ptr_to_double/../src/queue_ptr_to_double.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
  queue_ptr_to_double/../src/list_ptr_to_double.h \
  queue_ptr_to_double/../src/list_ptr_to_double.h \
  queue_ptr_to_double/../src/mm.h

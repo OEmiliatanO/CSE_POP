@@ -38,15 +38,24 @@ for ((c=1;c<3;++c)); do
 done
 
 # dep
-printf "dep:\n" >> Makefile
-printf "\t$CC -M *.c " >> Makefile
+printf "dep: " >> Makefile
+for ((c=0;c<3;++c)); do
+	for ((i=0;i<12;++i)); do
+		DIR=${container[$c]}_${types[$i]}
+		TARGET=$DIR.o
+		printf "$TARGET " >> Makefile
+	done
+done
+
 for ((c=1;c<3;++c)); do
 	for ((i=0;i<12;++i)); do
 		DIR=${container[$c]}_${types[$i]}
-		printf "$DIR/*.c " >> Makefile
+		TARGET=main_$DIR.o
+		printf "$TARGET " >> Makefile
 	done
 done
-printf " > .dep\n" >> Makefile
+
+printf "\n" >> Makefile
 
 # all
 printf "all: " >> Makefile
@@ -58,3 +67,4 @@ for ((c=1;c<3;++c)); do
 done
 printf "\n" >> Makefile
 printf ".PHONY: clean\nclean:\n\t-rm -rf *.o\n" >> Makefile
+printf "include .dep" >> Makefile
