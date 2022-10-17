@@ -40,9 +40,8 @@ int main()
 		if (op == 1)
 		{
 			int ty;
-			printf("value type: ");
+			printf("value type and value to be enqueued: ");
 			scanf("%d%*c", &ty);
-			printf("value to be put: ");
 			switch(ty)
 			{
 				case 0:
