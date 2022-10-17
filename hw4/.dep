@@ -1,0 +1,10 @@
+list.o: list.c src/list.h src/mydef.h src/mm.h src/mydef.h
+main_queue.o: main_queue.c src/mm.h src/list.h src/mydef.h src/queue.h \
+ src/list.h
+main_stack.o: main_stack.c src/mm.h src/list.h src/mydef.h src/stack.h \
+ src/list.h
+mm.o: mm.c src/mm.h
+queue.o: queue.c src/queue.h src/list.h src/mydef.h src/list.h src/mm.h \
+ src/mydef.h
+stack.o: stack.c src/stack.h src/list.h src/mydef.h src/mm.h src/list.h \
+ src/mydef.h
