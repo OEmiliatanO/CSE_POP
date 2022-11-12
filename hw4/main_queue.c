@@ -40,6 +40,7 @@ int main()
 		if (op == 1)
 		{
 			int ty;
+			printf("(0) char, (1) short, (2) int, (3) long, (4) float, (5) double, (6) char* (7) short*, (8) int*, (9) long*, (10) float*, (11) double*\n");
 			printf("value type and value to be enqueued: ");
 			scanf("%d%*c", &ty);
 			switch(ty)
@@ -145,6 +146,7 @@ int main()
 		else if (op == 2)
 		{
 			int ty;
+			printf("(0) char, (1) short, (2) int, (3) long, (4) float, (5) double, (6) char* (7) short*, (8) int*, (9) long*, (10) float*, (11) double*\n");
 			printf("type: ");
 			scanf("%d%*c", &ty);
 			switch(ty)
@@ -268,6 +270,7 @@ int main()
 		else if (op == 3)
 		{
 			int ty;
+			printf("(0) char, (1) short, (2) int, (3) long, (4) float, (5) double, (6) char* (7) short*, (8) int*, (9) long*, (10) float*, (11) double*\n");
 			printf("type: ");
 			scanf("%d%*c", &ty);
 			switch(ty)
